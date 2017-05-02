@@ -3,11 +3,15 @@ package com.chenxin.zhihuTest;
 import java.io.IOException;
 import java.util.Set;
 
+import org.apache.log4j.Logger;
+
 import com.chenxin.util.LinkQueue;
 import com.chenxin.util.ParseTool;
 
 public class Main2Test {
-
+	
+	static Logger logger = Logger.getLogger(Main2Test.class);
+	
 	public static void main(String[] args) throws IOException {
 		// LinkQueue linkQueue = new LinkQueue(); // 已经访问的url
 		// Queue queue = new Queue(); // 将要访问的url
@@ -34,6 +38,7 @@ public class Main2Test {
 			}
 			// 下载网页
 			System.out.println(visitUrl);
+			logger.error("aaaaaaaaaa");
 			// 将Url放入已访问的URL中
 			LinkQueue.addVisitedUrl(visitUrl);
 			// 提取出下载网页中的url
